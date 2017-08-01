@@ -19,11 +19,17 @@ Band gap prediction using the method from [Dey 2014](http://dx.doi.org/10.1016/j
 **Meredig\_replication.ipynb:**
 Formation energy prediction from [Meredig 2014](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.89.094104)
 
+**Ward\_bandgap.ipynb:**
+Band gap prediction using the method from [Ward 2016](https://www.nature.com/articles/npjcompumats201628)
+
+**Ward\_energy.ipynb:**
+Formation energy prediction using the method from [Ward 2016](https://www.nature.com/articles/npjcompumats201628)
+
 **Ward\_glass\_formation.ipynb:**
 Glass formation prediction using the method from [Ward 2016](https://www.nature.com/articles/npjcompumats201628)
 
-**Ward\_replication.ipynb:**
-Band gap, formation energy, and volume prediction using the method from [Ward 2016](https://www.nature.com/articles/npjcompumats201628)
+**Ward\_volume.ipynb:**
+Volume prediction using the method from [Ward 2016](https://www.nature.com/articles/npjcompumats201628)
 
 ## Datasets
 **bandgap.data:**
