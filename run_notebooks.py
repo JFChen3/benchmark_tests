@@ -7,7 +7,17 @@ import nbparameterise
 
 from nbconvert.preprocessors import ExecutePreprocessor
 
-def run_notebook(notebook, new_notebook, params_dict, savedir):
+def run_notebook(notebook, new_notebook, params_dict, savedir, execute_nb=True):
+    """
+    Generate and run a notebook given existing notebook and dataset parameters
+
+    Args:
+        notebook (str): File name of original notebook
+        new_notebook (str): File name of new notebook
+        params_dict (dict): Dictionary containing name, delimiter, and composition column label for data file
+        savedir (str): directory in which to save new notebook
+        execute_nb (bool): Executes notebooks if True, otherwise only creates them
+    """
     
     with open(notebook) as f:
         nb_run = nbformat.read(f, as_version=4)
@@ -18,7 +28,8 @@ def run_notebook(notebook, new_notebook, params_dict, savedir):
 
     cwd = os.getcwd()
 
-    ExecutePreprocessor(timeout=-1, kernel_name="python2").preprocess(new_nb, {"metadata":{"path":cwd}})
+    if execute_nb:
+        ExecutePreprocessor(timeout=-1, kernel_name="python2").preprocess(new_nb, {"metadata":{"path":cwd}})
 
     if not os.path.isdir(savedir):
         os.mkdir(savedir)
