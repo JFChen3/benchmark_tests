@@ -46,10 +46,10 @@ if __name__=="__main__":
     #Dataset benchmarks
     deml_data = {"training_file":"datasets/deml_dataset.csv", "delimiter":',', "comp_col":"composition"} 
     meredig_data = {"training_file":"datasets/meredig_full.data", "delimiter":' ', "comp_col":"composition"}
-    oqmd_data = {"training_file":"datasets/oqmd_all.data", "delimiter":' ', "comp_col":"comp"}
+    oqmd_data = {"training_file":"datasets/oqmd_groundstate.data", "delimiter":' ', "comp_col":"comp"}
 
     datasets = [deml_data, meredig_data, oqmd_data]
-    notebooks = ["Meredig_replication.ipynb", "Deml_descriptors.ipynb", "deJong_comp_descriptors.ipynb"]
+    notebooks = ["Meredig_replication.ipynb", "Deml_descriptors.ipynb", "deJong_comp_descriptors.ipynb", "Ward_energy.ipynb"]
 
     for nb in notebooks:
         for ds in datasets:
